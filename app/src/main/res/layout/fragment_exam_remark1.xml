@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.SpecialExamFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:paddingVertical="10dp"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kindly fill out all the fields provided below"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:paddingVertical="10dp"
+
+            android:layout_margin="15dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I wish to apply for the following units"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                />
+
+            <EditText
+                android:id="@+id/editunitcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Enter Unit Code"
+                />
+
+
+            <EditText
+                android:id="@+id/editTextunit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Enter Unit Name"
+                />
+
+
+            <EditText
+                android:id="@+id/editTextlecturer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Enter Lecturer name"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reason for requesting remark"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:hint="The reason I want a remark....." />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:paddingVertical="10dp"
+
+            android:layout_margin="15dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="As stipulated by the examination procedures,
+have hereby paid the necessary remark fee for the
+above stated unit(s"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                />
+
+            <EditText
+                android:id="@+id/editamountpaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:text="Amount Paid"
+                />
+
+
+            <EditText
+                android:id="@+id/editTextreceiptnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="Receipt Number"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:paddingHorizontal="10dp"
+            android:layout_margin="20dp"
+
+            >
+
+
+            <Button
+                android:id="@+id/button_special_exam_cancel"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_margin="15dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Cancel"
+                app:cornerRadius="7dp"
+                app:rippleColor="#2196F3" />
+
+
+
+
+
+            <Button
+                android:id="@+id/button_special_exam_submit"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_margin="15dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Submit"
+                app:cornerRadius="7dp"
+
+
+                app:rippleColor="#2196F3"
+
+                />
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
