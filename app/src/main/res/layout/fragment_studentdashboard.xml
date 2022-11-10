@@ -33,6 +33,10 @@
         android:text="Academic Leave Form"
         android:drawableRight="@drawable/ic_arrow_right_s_line"
         android:textSize="20dp"
+        android:textColor="@color/dark_blue"
+        android:backgroundTint="@color/white"
+        android:elevation="7dp"
+
 
 
 
@@ -47,7 +51,9 @@
             android:text="Exam Remark Form"
             android:drawableRight="@drawable/ic_arrow_right_s_line"
             android:textSize="20dp"
-
+            android:textColor="@color/dark_blue"
+            android:backgroundTint="@color/white"
+            android:elevation="7dp"
 
 
             />
@@ -62,7 +68,9 @@
             android:drawableRight="@drawable/ic_arrow_right_s_line"
             android:textSize="20dp"
 
-
+            android:textColor="@color/dark_blue"
+            android:backgroundTint="@color/white"
+            android:elevation="7dp"
 
             />
 
