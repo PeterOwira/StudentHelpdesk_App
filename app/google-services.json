@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "377437413472",
+    "project_id": "strathmore-app-44bf5",
+    "storage_bucket": "strathmore-app-44bf5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377437413472:android:e8487ffff64c8ab320a305",
+        "android_client_info": {
+          "package_name": "com.example.strathmore_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "377437413472-4splsh3hhfp81b6usnog1qfepq2d8lno.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFYsZ7zttdWkXdnGFivLrQ8v8zyELXaCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "377437413472-4splsh3hhfp81b6usnog1qfepq2d8lno.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
