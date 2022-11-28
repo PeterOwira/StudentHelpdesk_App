@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/strathlogo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/strathmore_university_logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +80,7 @@
                 android:id="@+id/text_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Username"
+                android:text="User Email"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:layout_marginTop="20dp"
@@ -89,10 +89,10 @@
 
 
             <EditText
-                android:id="@+id/editTextusername"
+                android:id="@+id/editloginTextemail"
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                />
 
 
@@ -110,7 +110,7 @@
 
 
             <EditText
-                android:id="@+id/editTextpassword"
+                android:id="@+id/editloginTextpassword"
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -161,7 +161,7 @@
 
 
                 android:longClickable="true"
-                android:text="Not registered???"
+                android:text="Register"
                 android:textColor="@color/dark_blue"
                 android:textSize="15dp"
                 android:focusable="true" />

@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.replace
+import androidx.navigation.fragment.findNavController
 import com.example.strathmore_app.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -35,27 +38,36 @@ class Studentdashboard : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_studentdashboard, container, false)
+
+
+
+                return inflater.inflate(R.layout.fragment_studentdashboard, container, false)
 
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param textview1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Studentdashboard.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(textview1: String, param2: String) =
-            Studentdashboard().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_textview1, textview1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+
+        view?.findViewById<Button>(com.example.strathmore_app.R.id.button_academic_leave_form)?.setOnClickListener {
+
+            findNavController().navigate(com.example.strathmore_app.R.id.action_nav_home_to_nav_academic_leave)
+
+        }
+
+
+        view?.findViewById<Button>(com.example.strathmore_app.R.id.button_special_exam_form)?.setOnClickListener {
+
+            findNavController().navigate(com.example.strathmore_app.R.id.action_nav_home_to_nav_special_exam)
+
+        }
+
+        view?.findViewById<Button>(com.example.strathmore_app.R.id.button_exam_remark_form)?.setOnClickListener {
+
+            findNavController().navigate(com.example.strathmore_app.R.id.action_nav_home_to_nav_exam_remark1)
+
+        }
+
+
+
     }
 }

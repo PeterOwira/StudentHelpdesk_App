@@ -57,7 +57,7 @@
 
 
             <EditText
-                android:id="@+id/editstart_date"
+                android:id="@+id/edit_academic_start_date"
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:inputType="date"
@@ -85,7 +85,7 @@
 
 
             <EditText
-                android:id="@+id/editenddate"
+                android:id="@+id/edit_academic_enddate"
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:inputType="date"
@@ -121,7 +121,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingHorizontal="10dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:id="@+id/academic_radiogroup"
+            >
 
             <RadioButton
                 android:id="@+id/radioButton_work_onstraints"

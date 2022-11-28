@@ -26,7 +26,7 @@
         />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_academic_leave_form"
         android:layout_width="match_parent"
         android:layout_margin="20dp"
         android:layout_height="100dp"
@@ -60,7 +60,7 @@
 
 
         <Button
-            android:id="@+id/special_exam_form"
+            android:id="@+id/button_special_exam_form"
             android:layout_width="match_parent"
             android:layout_margin="20dp"
             android:layout_height="100dp"

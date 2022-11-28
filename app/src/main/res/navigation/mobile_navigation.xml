@@ -11,6 +11,19 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_studentdashboard" >
 
+        <action
+            android:id="@+id/action_nav_home_to_nav_special_exam"
+            app:destination="@id/nav_special_exam"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_exam_remark1"
+            app:destination="@id/nav_exam_remark1"
+            app:enterAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_academic_leave"
+            app:destination="@id/nav_academic_leave"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 
 
@@ -19,7 +32,13 @@
         android:id="@+id/nav_special_exam"
         android:name="com.example.strathmore_app.ui.SpecialExamFragment"
         android:label="Special Exam"
-        tools:layout="@layout/fragment_special_exam" />
+        tools:layout="@layout/fragment_special_exam" >
+        <action
+            android:id="@+id/action_nav_special_exam_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
 
 
 
@@ -29,6 +48,11 @@
         android:label="Academic Leave"
         tools:layout="@layout/fragment_academic_leave" >
 
+        <action
+            android:id="@+id/action_nav_academic_leave_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_enter_anim" />
     </fragment>
 
     <fragment
@@ -37,6 +61,11 @@
         android:label="Exam Remark"
         tools:layout="@layout/fragment_exam_remark1" >
 
+        <action
+            android:id="@+id/action_nav_exam_remark1_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 
 

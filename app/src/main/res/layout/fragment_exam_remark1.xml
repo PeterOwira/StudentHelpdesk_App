@@ -55,30 +55,30 @@
                 />
 
             <EditText
-                android:id="@+id/editunitcode"
+                android:id="@+id/edit_exam_remark_unitcode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:text="Enter Unit Code"
+                android:hint="Enter Unit Code"
 
                 />
 
 
             <EditText
-                android:id="@+id/editTextunit_name"
+                android:id="@+id/editText_exam_remark_unit_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:text="Enter Unit Name"
+                android:hint="Enter Unit Name"
                 />
 
 
             <EditText
-                android:id="@+id/editTextlecturer"
+                android:id="@+id/editText_exam_remark_lecturer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:text="Enter Lecturer name"
+                android:hint="Enter Lecturer name"
                 />
 
         </LinearLayout>
@@ -100,7 +100,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:hint="The reason I want a remark....." />
+                android:hint="The reason I want a remark....."
+                android:id="@+id/exam_remark_reason_text"
+
+                />
 
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -129,20 +132,20 @@ above stated unit(s"
                 />
 
             <EditText
-                android:id="@+id/editamountpaid"
+                android:id="@+id/edit_exam_remark_amountpaid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:text="Amount Paid"
+                android:hint="Amount Paid"
                 />
 
 
             <EditText
-                android:id="@+id/editTextreceiptnumber"
+                android:id="@+id/editText_exam_remark_receiptnumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:text="Receipt Number"
+                android:inputType="text"
+                android:hint="Receipt ID"
                 />
 
 
@@ -165,7 +168,7 @@ above stated unit(s"
 
             <Button
 
-                android:id="@+id/button_special_exam_cancel"
+                android:id="@+id/button_special_exam_remark_cancel"
                 android:layout_width="100dp"
                 android:layout_height="60dp"
                 android:layout_margin="15dp"
@@ -185,7 +188,7 @@ above stated unit(s"
 
 
             <Button
-                android:id="@+id/button_special_exam_submit"
+                android:id="@+id/button_exam_remark_submit"
                 android:layout_width="120dp"
                 android:layout_height="60dp"
                 android:layout_margin="15dp"

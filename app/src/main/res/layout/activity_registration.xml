@@ -12,7 +12,7 @@
     <ImageView
         android:id="@+id/strathlogo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/strathmore_university_logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +92,7 @@
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:text="First" />
+                android:hint="First" />
 
 
 
@@ -101,7 +101,7 @@
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:text="Middle" />
+                android:hint="Middle" />
 
 
 
@@ -110,7 +110,7 @@
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:text="Last" />
+                android:hint="Last" />
 
 
 
@@ -197,7 +197,7 @@
 
 
                 android:longClickable="true"
-                android:text="Already registered???"
+                android:text="Login"
                 android:textColor="@color/dark_blue"
                 android:textSize="15dp" />
 

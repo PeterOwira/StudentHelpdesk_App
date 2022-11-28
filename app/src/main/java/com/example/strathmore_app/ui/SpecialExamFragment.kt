@@ -1,16 +1,21 @@
 package com.example.strathmore_app.ui
 
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.RadioGroup
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.example.strathmore_app.R
+import com.example.strathmore_app.models.AcademicLeave
+import com.example.strathmore_app.models.SpecialExam
+import com.google.firebase.database.FirebaseDatabase
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -18,15 +23,16 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class SpecialExamFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
+    private lateinit var database: FirebaseDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        database = FirebaseDatabase.getInstance()
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+
+
+
         }
     }
 
@@ -38,23 +44,76 @@ class SpecialExamFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_special_exam, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SpecialExamFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SpecialExamFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        view?.findViewById<Button>(com.example.strathmore_app.R.id.button_special_exam_cancel)?.setOnClickListener{
+
+            Toast.makeText(activity,"Cancelled", Toast.LENGTH_SHORT).show()
+        }
+
+        view?.findViewById<Button>(com.example.strathmore_app.R.id.button_special_exam_submit)?.setOnClickListener {
+
+            val myspecialexamcheck = savespecialexam()
+
+
+            if(myspecialexamcheck){
+                Toast.makeText(activity,"Successfully Submitted", Toast.LENGTH_SHORT).show()
+
+                findNavController().navigate(com.example.strathmore_app.R.id.action_nav_special_exam_to_nav_home)
+
+
             }
+        }
+
     }
+
+    private fun savespecialexam() :Boolean {
+
+        val unitcode= view?.findViewById<EditText>(R.id.edit_special_exam_unitcode)?.text.toString()
+        val unitname= view?.findViewById<EditText>(R.id.edit_special_exam_unitcode)?.text.toString()
+        val session= view?.findViewById<EditText>(R.id.edit_special_exam_unitcode)?.text.toString()
+
+
+
+        val specialexamradiogroup = view?.findViewById<RadioGroup>(R.id.radiogroup_special_exam_form)
+        val specialexamoptions = when (specialexamradiogroup?.checkedRadioButtonId) {
+            R.id.radioButton_special_exam_fees_arrears -> "Fees Arrears"
+            R.id.radioButton_special_exam_illness -> "Illness"
+
+            else -> "Other"
+        }
+
+
+        if (TextUtils.isEmpty(unitcode)){
+            Toast.makeText(activity,"Unit Code is empty", Toast.LENGTH_SHORT).show()
+
+            return false
+        }
+
+        if (TextUtils.isEmpty(unitname)){
+            Toast.makeText(activity,"Unit Name is empty", Toast.LENGTH_SHORT).show()
+
+            return false
+        }
+
+        if (TextUtils.isEmpty(session)){
+            Toast.makeText(activity,"Session is empty", Toast.LENGTH_SHORT).show()
+
+            return false
+        }
+
+        if (specialexamoptions == null){
+            Toast.makeText(activity,"Kindly select a reason", Toast.LENGTH_SHORT).show()
+
+            return false
+        }
+
+        val myspecialexam = SpecialExam(unitcode,unitname,session,specialexamoptions)
+        database.reference.child("SpecialExam").setValue(myspecialexam)
+
+
+        return true
+
+    }
+
+
 }

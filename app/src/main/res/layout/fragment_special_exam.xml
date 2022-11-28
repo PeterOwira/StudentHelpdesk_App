@@ -66,29 +66,29 @@
             />
 
         <EditText
-            android:id="@+id/editunitcode"
+            android:id="@+id/edit_special_exam_unitcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:text="Enter Unit Code"
+            android:hint="Enter Unit Code"
             />
 
 
         <EditText
-            android:id="@+id/editTextunit_name"
+            android:id="@+id/editText_special_exam_unit_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:text="Enter Unit Name"
+            android:hint="Enter Unit Name"
             />
 
 
         <EditText
-            android:id="@+id/editTextsession"
+            android:id="@+id/editText_special_exam_session"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:text="Enter Session Applied for"
+            android:hint="Enter Session Applied for"
             />
 
     </LinearLayout>
@@ -119,17 +119,20 @@ android:background="@drawable/custom_button_cancel"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingHorizontal="10dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:id="@+id/radiogroup_special_exam_form"
+
+            >
 
             <RadioButton
-                android:id="@+id/radioButton_fees_arrears"
+                android:id="@+id/radioButton_special_exam_fees_arrears"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Fees Arrears" />
 
 
             <RadioButton
-                android:id="@+id/radioButton_illness"
+                android:id="@+id/radioButton_special_exam_illness"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Illness" />
@@ -137,7 +140,7 @@ android:background="@drawable/custom_button_cancel"
 
 
             <RadioButton
-                android:id="@+id/radioButton_other"
+                android:id="@+id/radioButton_special_exam_other"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Other(Specify Below)" />
